@@ -1,0 +1,168 @@
+<div class = "gallery">
+    {% for block in section.blocks %}
+      {% assign contentsLocate = block.settings.select_locate %}
+      {% case contentsLocate %}
+        {% when 'left' %}
+          <div class = "text_image_RL">
+            <div class = "text_left">
+              <p class = "item">{{ block.settings.head_text }}</p>
+              {% assign subheadingSize = block.settings.select_size %}
+              {% case subheadingSize %}
+                {% when 'small' %}
+                  <h5 class = "item" id="subheading-size-small">{{ block.settings.subhead_text }}</h5>
+                {% when 'medium' %}
+                  <h4 class = "item" id="subheading-size-medium">{{ block.settings.subhead_text }}</h4>
+                {% when 'large' %}
+                  <h3 class = "item" id="subheading-size-large">{{ block.settings.subhead_text }}</h3>
+                {% else %}
+              {% endcase %}
+            </div>
+            {% assign img_Focal = block.settings.select_focal %}
+            <a href = "{{ block.settings.link }}">
+              {% case img_Focal %}
+                {% when 'left' %}
+                  <img class = 'left' src="{{ block.settings.image_box | img_url: 'master' }}" alt="{{ block.settings.image_box.alt }}" width = "200" height = "150" loading = 'lazy'>
+                {% when 'center' %}
+                  <img class = 'center' src="{{ block.settings.image_box | img_url: 'master' }}" alt="{{ block.settings.image_box.alt }}" width = "200" height = "150" loading = 'lazy'>
+                {% when 'right' %}
+                  <img class = 'right' src="{{ block.settings.image_box | img_url: 'master' }}" alt="{{ block.settings.image_box.alt }}" width = "200" height = "150" loading = 'lazy'>
+                {% endcase %}
+            </a>
+          </div>
+        {% when 'right' %}
+          <div class = "text_image_RL">
+            <div class = "text_right">
+              <p class = "item">{{ block.settings.head_text }}</p>
+              {% assign subheadingSize = block.settings.select_size %}
+              {% case subheadingSize %}
+                {% when 'small' %}
+                  <h5 class = "item" id="subheading-size-small">{{ block.settings.subhead_text }}</h5>
+                {% when 'medium' %}
+                  <h4 class = "item" id="subheading-size-medium">{{ block.settings.subhead_text }}</h4>
+                {% when 'large' %}
+                  <h3 class = "item" id="subheading-size-large">{{ block.settings.subhead_text }}</h3>
+              {% endcase %}
+            </div>
+            {% assign img_Focal = block.settings.select_focal %}
+            <a href = "{{ block.settings.link }}">
+              {% case img_Focal %}
+                {% when 'left' %}
+                  <img class = 'left' src="{{ block.settings.image_box | img_url: 'master' }}" alt="{{ block.settings.image_box.alt }}" width = "200" height = "150" loading = 'lazy'>
+                {% when 'center' %}
+                  <img class = 'center' src="{{ block.settings.image_box | img_url: 'master' }}" alt="{{ block.settings.image_box.alt }}" width = "200" height = "150" loading = 'lazy'>
+                {% when 'right' %}
+                  <img class = 'right' src="{{ block.settings.image_box | img_url: 'master' }}" alt="{{ block.settings.image_box.alt }}" width = "200" height = "150" loading = 'lazy'>
+                {% endcase %}
+            </a>
+          </div>
+        {% when 'above' %}
+          <div class = "text_image">
+            <p class = "item">{{ block.settings.head_text }}</p>
+            {% assign subheadingSize = block.settings.select_size %}
+            {% case subheadingSize %}
+              {% when 'small' %}
+                <h5 class = "item" id="subheading-size-small">{{ block.settings.subhead_text }}</h5>
+              {% when 'medium' %}
+                <h4 class = "item" id="subheading-size-medium">{{ block.settings.subhead_text }}</h4>
+              {% when 'large' %}
+                <h3 class = "item" id="subheading-size-large">{{ block.settings.subhead_text }}</h3>
+              {% else %}
+            {% endcase %}
+            {% assign img_Focal = block.settings.select_focal %}
+            <a href = "{{ block.settings.link }}">
+              {% case img_Focal %}
+                {% when 'left' %}
+                  <img class = 'left' src="{{ block.settings.image_box | img_url: 'master' }}" alt="{{ block.settings.image_box.alt }}" width = "200" height = "150" loading = 'lazy'>
+                {% when 'center' %}
+                  <img class = 'center' src="{{ block.settings.image_box | img_url: 'master' }}" alt="{{ block.settings.image_box.alt }}" width = "200" height = "150" loading = 'lazy'>
+                {% when 'right' %}
+                  <img class = 'right' src="{{ block.settings.image_box | img_url: 'master' }}" alt="{{ block.settings.image_box.alt }}" width = "200" height = "150" loading = 'lazy'>
+                {% endcase %}
+            </a>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+  
+  
+  <link rel = "stylesheet" href = "{{ 'gallery.css' | asset_url }}">
+  
+  {% schema %}
+  
+  {
+      "name": "ギャラリー",
+      "blocks": [
+        {
+          "type": "image",
+          "name": "画像block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_box",
+          "label": "画像を選ぶ"
+        },
+        {
+          "type": "select",
+          "id": "select_focal",
+          "options": [
+            { "value": "left", "label": "左"},
+            { "value": "center", "label": "中央"},
+            { "value": "right", "label": "右"}
+          ],
+          "label": "画像のフォーカルポイント"
+        },
+        {
+          "type": "text",
+          "id": "subhead_text",
+          "label": "サブヘディング"
+        },
+        {
+          "type": "select",
+          "id": "select_size",
+          "options": [
+            { "value": "large", "label": "大"},
+            { "value": "medium", "label": "中"},
+            { "value": "small", "label": "小"}
+          ],
+          "label": "サブヘディングのサイズ"
+        },
+        {
+          "type": "text",
+          "id": "head_text",
+          "label": "ヘディング"
+        },
+        {
+          "type":"url",
+          "id": "link",
+          "label": "URL"
+        },
+        {
+          "type": "select",
+          "id": "select_locate",
+          "options": [
+            { "value": "left", "label": "上下左右の左"},
+            { "value": "above", "label": "上下左右の上"}
+          ],
+          "label": "コンテンツの位置表示"
+        }
+      ]
+    }
+  ],
+    
+    "presets": [
+       {
+         "name": "テスト画像",
+         "category": "画像"
+       }
+     ]
+  }
+  
+    
+  {% endschema %}
+  
+  {% stylesheet %}
+  {% endstylesheet %}
+  
+  {% javascript %}
+  {% endjavascript %}
+  
