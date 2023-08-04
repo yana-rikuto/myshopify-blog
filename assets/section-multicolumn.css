@@ -225,7 +225,14 @@
 }
 
 /* 左端のカラムの幅を減らす */
+.multicolumn-card__image-wrapper--first {
+  width: 0%; /* 画像の幅を25%に設定（カラムの1/4） */
+}
 
+/* 右端のカラムの幅を減らす */
+.multicolumn-card__image-wrapper--last {
+  width: 0%; /* 画像の幅を25%に設定（カラムの1/4） */
+}
 
 /* カラムの背景を親要素と同じ大きさにするカスタムCSS */
 .multicolumn .multicolumn-card__image-wrapper {
@@ -251,21 +258,5 @@
   overflow: hidden; /* 丸い角がはみ出さないようにオーバーフローを非表示にします */
 }
 
-/* 左端のカラムの幅を減らす */
-.multicolumn-card__image-wrapper--first {
-  width: 25%; /* 画像の幅を25%に設定（カラムの1/4） */
-  border-radius: 8px 0 0 8px; /* 左側の角を丸くする */
-  overflow: hidden; /* 丸い角がはみ出さないようにオーバーフローを非表示にします */
-  margin-left: 0; /* 左端の余白を0に設定 */
-  margin-right: 0.5rem; /* 右端の余白を0.5remに設定 */
-}
 
-/* 右端のカラムの幅を減らす */
-.multicolumn-card__image-wrapper--last {
-  width: 25%; /* 画像の幅を25%に設定（カラムの1/4） */
-  border-radius: 0 8px 8px 0; /* 右側の角を丸くする */
-  overflow: hidden; /* 丸い角がはみ出さないようにオーバーフローを非表示にします */
-  margin-left: 0.5rem; /* 左端の余白を0.5remに設定 */
-  margin-right: 0; /* 右端の余白を0に設定 */
-}
 
