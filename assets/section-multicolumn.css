@@ -241,3 +241,9 @@
   left: 0; /* 左端に配置 */
 }
 
+/* カラムの配置を中央寄せにするカスタムCSS */
+.multicolumn .center {
+  text-align: center;
+}
+
+
