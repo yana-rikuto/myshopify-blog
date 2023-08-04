@@ -195,6 +195,7 @@
   position: relative;
   box-sizing: border-box;
   border-radius: 8px; /* 丸みの半径を8pxに設定（適宜調整してください） */
+  overflow: hidden; /* 丸い角がはみ出さないようにオーバーフローを非表示にします */
 }
 
 .multicolumn-card > .multicolumn-card__image-wrapper--full-width:not(.multicolumn-card-spacing) {
@@ -243,10 +244,6 @@
   left: 0; /* 左端に配置 */
 }
 
-/* カラムの配置を中央寄せにするカスタムCSS */
-.multicolumn .center {
-  text-align: center;
-}
 
 /* セクション全体の背景を薄い灰色にするカスタムCSS */
 .multicolumn {
