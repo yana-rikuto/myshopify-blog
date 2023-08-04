@@ -138,6 +138,7 @@
 
 .multicolumn-card__info {
   padding: 0.5rem;
+  border-radius: 8px; /* 丸みの半径を8pxに設定（適宜調整してください） */
   min-height: 350px; /* カラムの最低高さを200pxに設定（適宜調整してください） */
 }
 
