@@ -257,4 +257,11 @@
   background-color: #f0f0f0; /* 薄い灰色の背景色を設定 */
 }
 
+.multicolumn-card__image-wrapper--first,
+.multicolumn-card__image-wrapper--last {
+  width: 100%; /* カラムの幅を100%に設定 */
+  border-radius: 8px; /* 丸みの半径を適宜調整してください */
+  overflow: hidden; /* 丸い角がはみ出さないようにオーバーフローを非表示にします */
+}
+
 
