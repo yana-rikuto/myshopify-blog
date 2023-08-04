@@ -251,3 +251,8 @@
   background-color: #f0f0f0; /* 薄い灰色の背景色を設定 */
 }
 
+/* カラムの最低高さを指定 */
+.multicolumn-card__info {
+  min-height: 200px; /* カラムの最低高さを200pxに設定（適宜調整してください） */
+}
+
