@@ -246,4 +246,8 @@
   text-align: center;
 }
 
+/* セクション全体の背景を薄い灰色にするカスタムCSS */
+.multicolumn {
+  background-color: #f0f0f0; /* 薄い灰色の背景色を設定 */
+}
 
