@@ -194,6 +194,7 @@
 .multicolumn-card {
   position: relative;
   box-sizing: border-box;
+  border-radius: 8px; /* 丸みの半径を8pxに設定（適宜調整してください） */
 }
 
 .multicolumn-card > .multicolumn-card__image-wrapper--full-width:not(.multicolumn-card-spacing) {
