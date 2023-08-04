@@ -258,20 +258,5 @@
   overflow: hidden; /* 丸い角がはみ出さないようにオーバーフローを非表示にします */
 }
 
-/* 左端のカラムの幅を減らす */
-.multicolumn-list__item:first-child .multicolumn-card__image-wrapper {
-  width: 25%; /* 画像の幅を25%に設定（カラムの1/4） */
-  border-radius: 8px 0 0 8px; /* 左側の角を丸くする */
-  overflow: hidden; /* 丸い角がはみ出さないようにオーバーフローを非表示にします */
-  margin: 0; /* 左右の余白をなくす */
-}
-
-/* 右端のカラムの幅を減らす */
-.multicolumn-list__item:last-child .multicolumn-card__image-wrapper {
-  width: 25%; /* 画像の幅を25%に設定（カラムの1/4） */
-  border-radius: 0 8px 8px 0; /* 右側の角を丸くする */
-  overflow: hidden; /* 丸い角がはみ出さないようにオーバーフローを非表示にします */
-  margin: 0; /* 左右の余白をなくす */
-}
 
 
