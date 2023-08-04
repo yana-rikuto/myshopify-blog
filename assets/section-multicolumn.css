@@ -138,7 +138,7 @@
 
 .multicolumn-card__info {
   padding: 2.5rem;
-  min-height: 200px; /* カラムの最低高さを200pxに設定（適宜調整してください） */
+  min-height: 250px; /* カラムの最低高さを200pxに設定（適宜調整してください） */
 }
 
 .background-none .multicolumn-card__info {
