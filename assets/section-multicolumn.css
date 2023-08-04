@@ -1,6 +1,5 @@
 .multicolumn .title {
   margin: 0;
-  background-color: #f0f0f0; /* 薄い灰色の背景色を設定 */
 }
 
 
@@ -30,15 +29,12 @@
 
 .multicolumn-card__image-wrapper--half-width {
   width: 100%;
-  border-radius: 8px; /* 丸みの半径を8pxに設定（適宜調整してください） */
 }
 
 .multicolumn-list__item.center .multicolumn-card__image-wrapper:not(.multicolumn-card__image-wrapper--full-width),
 .multicolumn-list__item:only-child {
   margin-left: auto;
   margin-right: auto;
-  border-radius: 8px; /* 丸みの半径を8pxに設定（適宜調整してください） */
-
 }
 
 .multicolumn .button {
@@ -67,14 +63,12 @@
 
 .multicolumn:not(.background-none) .multicolumn-card {
   background: rgb(var(--color-background));
-  background-color: #f0f0f0; /* 薄い灰色の背景色を設定 */
   height: 100%;
 }
 
 .multicolumn.background-primary .multicolumn-card {
   background: rgb(var(--color-background))
     linear-gradient(rgba(var(--color-foreground), 0.04), rgba(var(--color-foreground), 0.04));
-  background-color: #f0f0f0; /* 薄い灰色の背景色を設定 */
 }
 
 .multicolumn-list h3 {
