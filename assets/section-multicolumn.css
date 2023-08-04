@@ -216,3 +216,13 @@
     display: list-item;
   }
 }
+
+/* 左端のカラムの幅を減らす */
+.multicolumn-card__image-wrapper--first {
+  width: 25%; /* 画像の幅を25%に設定（カラムの1/4） */
+}
+
+/* 右端のカラムの幅を減らす */
+.multicolumn-card__image-wrapper--last {
+  width: 25%; /* 画像の幅を25%に設定（カラムの1/4） */
+}
