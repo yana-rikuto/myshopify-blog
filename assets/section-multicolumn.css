@@ -182,6 +182,7 @@
   .background-none .multicolumn-card__image-wrapper {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    border-radius: 8px; /* 丸みの半径を8pxに設定（適宜調整してください） */
   }
 
   .background-none .multicolumn-list .multicolumn-card__info,
