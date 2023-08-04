@@ -1,6 +1,9 @@
 .multicolumn .title {
   margin: 0;
+  background-color: #f0f0f0; /* 薄い灰色の背景色を設定 */
 }
+
+
 
 .multicolumn.no-heading .title {
   display: none;
