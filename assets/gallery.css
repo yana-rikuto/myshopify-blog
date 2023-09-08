@@ -6,6 +6,19 @@
 .text_image {
     display: flex;
     flex-direction: column;
+
+}
+
+.section_wrapper {
+    background: linear-gradient(to bottom, #cafeca, #87ceeb, #ffffff); /* グラデーションを設定 */
+    display: flex; /* Flexコンテナを作成 */
+}
+
+.image-container { 
+    display: flex; /* Flexコンテナを作成 */
+    justify-content: space-between; /* 画像を均等に配置 */
+    align-items: center;
+    flex: 0 0 auto;
 }
 
 .item {
@@ -13,25 +26,37 @@
 }
 
 .left {
-    width: 160px;
-    height: 120px;
+    width: 220px;
+    height: 140px;
     object-fit: cover;
     object-position: 0% 50%;
+    border-radius: 5px; /* 角を5ピクセルで丸くする */
+    border: 1px solid #ccc; /* 1ピクセルの灰色の枠を追加 */
+    margin-right: 10px;
+    flex: 1; /* Flexアイテムの伸縮率を1に設定（均等に配置するため） */
 }
 
 
 .center {
-    width: 160px;
+    width: 220px;
     height: 120px;
     object-fit: cover;
     object-position: 50% 50%;
+    border-radius: 5px; /* 角を5ピクセルで丸くする */
+    border: 1px solid #ccc; /* 1ピクセルの灰色の枠を追加 */
+    margin-right: 10px;
+    flex: 1; /* Flexアイテムの伸縮率を1に設定（均等に配置するため） */
 }
 
 .right {
-    width: 160px;
+    width: 220px;
     height: 120px;
     object-fit: cover;
     object-position: 100% 50%;
+    border-radius: 5px; /* 角を5ピクセルで丸くする */
+    border: 1px solid #ccc; /* 1ピクセルの灰色の枠を追加 */
+    margin-right: 10px;
+    flex: 1; /* Flexアイテムの伸縮率を1に設定（均等に配置するため） */
 }
 
 .text_left {
