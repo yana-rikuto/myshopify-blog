@@ -2,6 +2,8 @@
   margin: 0;
 }
 
+
+
 .multicolumn.no-heading .title {
   display: none;
 }
@@ -26,7 +28,7 @@
 }
 
 .multicolumn-card__image-wrapper--half-width {
-  width: 150%;
+  width: 110%;
 }
 
 .multicolumn-list__item.center .multicolumn-card__image-wrapper:not(.multicolumn-card__image-wrapper--full-width),
@@ -94,8 +96,8 @@
 }
 
 .multicolumn-list__item.center .media--adapt img {
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0%;
+  transform: translateX(0%);
 }
 
 @media screen and (max-width: 749px) {
@@ -132,7 +134,9 @@
 }
 
 .multicolumn-card__info {
-  padding: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 8px; /* 丸みの半径を8pxに設定（適宜調整してください） */
+  min-height: 350px; /* カラムの最低高さを200pxに設定（適宜調整してください） */
 }
 
 .background-none .multicolumn-card__info {
@@ -176,6 +180,7 @@
   .background-none .multicolumn-card__image-wrapper {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    border-radius: 8px; /* 丸みの半径を8pxに設定（適宜調整してください） */
   }
 
   .background-none .multicolumn-list .multicolumn-card__info,
@@ -188,6 +193,8 @@
 .multicolumn-card {
   position: relative;
   box-sizing: border-box;
+  border-radius: 8px; /* 丸みの半径を8pxに設定（適宜調整してください） */
+  overflow: hidden; /* 丸い角がはみ出さないようにオーバーフローを非表示にします */
 }
 
 .multicolumn-card > .multicolumn-card__image-wrapper--full-width:not(.multicolumn-card-spacing) {
@@ -216,3 +223,40 @@
     display: list-item;
   }
 }
+
+/* 左端のカラムの幅を減らす */
+.multicolumn-card__image-wrapper--first {
+  width: 0%; /* 画像の幅を25%に設定（カラムの1/4） */
+}
+
+/* 右端のカラムの幅を減らす */
+.multicolumn-card__image-wrapper--last {
+  width: 0%; /* 画像の幅を25%に設定（カラムの1/4） */
+}
+
+/* カラムの背景を親要素と同じ大きさにするカスタムCSS */
+.multicolumn .multicolumn-card__image-wrapper {
+  position: relative; /* 要素を相対配置に設定 */
+  width: 100%; /* 親要素と同じ幅に設定 */
+  height: 100%; /* 親要素と同じ高さに設定 */
+  top: 0; /* 上端に配置 */
+  left: 0; /* 左端に配置 */
+  border-radius: 8px; /* 丸みの半径を適宜調整してください */
+  overflow: hidden; /* 丸い角がはみ出さないようにオーバーフローを非表示にします */
+}
+
+
+/* セクション全体の背景を薄い灰色にするカスタムCSS */
+.multicolumn {
+  background-color: #f0f0f0; /* 薄い灰色の背景色を設定 */
+}
+
+.multicolumn-card__image-wrapper--first,
+.multicolumn-card__image-wrapper--last {
+  width: 100%; /* カラムの幅を100%に設定 */
+  border-radius: 8px; /* 丸みの半径を適宜調整してください */
+  overflow: hidden; /* 丸い角がはみ出さないようにオーバーフローを非表示にします */
+}
+
+
+
