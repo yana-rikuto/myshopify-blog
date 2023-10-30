@@ -322,6 +322,21 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "e519f712-151a-4292-b1c4-3cbea8b4e423": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".sp-only-footer {background: #fff; border-top: solid 1px #ddd; position: fixed; width: 100vw; bottom: 0; z-index: 2;}",
+        ".sp-footer-menu {list-style: none; padding: 0; display: flex;}",
+        ".sp-footer-menu li {width: 25%; text-align: center; font-size: 12px;}",
+        "@media screen and (min-width: 990px) {.sp-only-footer {display: none; }}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"sp-only-footer\">\n<ul class=\"sp-footer-menu\">\n<li><a href=\"\">メニューA<\/a><\/li>\n<li><a href=\"\">メニューB<\/a><\/li>\n<li><a href=\"\">メニューC<\/a><\/li>\n<li><a href=\"\">メニューD<\/a><\/li>\n<\/ul>\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -331,6 +346,7 @@
     "1161278d-fb41-475e-8341-359125a95afd",
     "1c07759a-eda9-45b3-8f04-43bdd90cee84",
     "featured_collection",
-    "081eaefc-50ba-47a5-abef-4d3810adb2aa"
+    "081eaefc-50ba-47a5-abef-4d3810adb2aa",
+    "e519f712-151a-4292-b1c4-3cbea8b4e423"
   ]
 }
